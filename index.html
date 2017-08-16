@@ -3,8 +3,28 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<style>
+			body{
+				text-align: center;
+			}
+			canvas{
+				background: #ccc;
+			}
+		</style>
 	</head>
 	<body>
-		
+		<h1>canvas 绘图 路径</h1>
+		<canvas width="500" height="400" id="c2"></canvas>
+		<script>
+			var ctx=c2.getContext('2d');
+			ctx.beginPath();//开始新路径
+			ctx.moveTo(50,50);//移动到
+			ctx.lineTo(50,350);//画
+			ctx.lineTo(450,350);
+			ctx.lineTo(450,50);
+			//ctx.closePath();闭合
+			ctx.stroke();//画
+			ctx.fill()
+		</script>
 	</body>
 </html>
